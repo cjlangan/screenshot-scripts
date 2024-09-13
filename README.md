@@ -25,4 +25,4 @@ screenshot-utils uses two configuration files both located at `$HOME/.config/scr
 
 The first file is `copy-path` and by default contains `FALSE`. If set to `TRUE` it will load the path of the file into the clipboard before it takes the screenshot.
 
-The second file is `screenshot-path` it determines the path where the screenshots are saved. The default is `$HOME/Pictures/Screenshots'. 
+The second file is `screenshot-path` it determines the path where the screenshots are saved. The default is `$HOME/Pictures/Screenshots`. 
