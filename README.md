@@ -19,3 +19,10 @@ screenshot-utils has three scripts: `screenshot`, `selective_screenshot` and `wi
 `screenshot` takes a snapshot of your whole screen
 `selective_screenshot` lets you select an area of your screen to take a snapshot of
 `window_screenshot` takes a snapshot of the currently focused window. This feature is only useful if you bind it to a hotkey.
+
+### Configuration
+screenshot-utils uses two configuration files both located at `$HOME/.config/screenshot-utils`. 
+
+The first file is `copy-path` and by default contains `FALSE`. If set to `TRUE` it will load the path of the file into the clipboard before it takes the screenshot.
+
+The second file is `screenshot-path` it determines the path where the screenshots are saved. The default is `$HOME/Pictures/Screenshots'. 
