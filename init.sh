@@ -21,7 +21,9 @@ mv screenshot selective_screenshot window_screenshot $HOME/.scripts/screenshot-u
 echo ""
 echo "Installation finished."
 echo "You can now remove this folder."
-echo "To add the scripts to your path run"
+echo "To temporarily add the scripts to your path run"
 echo "export PATH=\$HOME/.scripts/screenshot-utils:\$PATH"
+echo "To perminantly add the scripts to your path run"
+echo "echo \"export PATH=\\\$HOME/.scripts/screenshot-utils:\\\$PATH\" >> \$HOME/.bashrc"
 
 rm init.sh
