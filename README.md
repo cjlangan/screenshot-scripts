@@ -13,7 +13,7 @@ screenshot-utils is a set of screenshot scripts that are meant to be used as key
 3. run 'export PATH=\$HOME/.scripts/screenshot-utils:\$PATH'
 4. profit
 
-### Explination
+### Usage
 screenshot-utils has three scripts: `screenshot`, `selective_screenshot` and `window_screenshot`.
 
 `screenshot` takes a snapshot of your whole screen
