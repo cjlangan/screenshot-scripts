@@ -1,18 +1,19 @@
 screenshot-utils is a set of screenshot scripts that are meant to be used as keybinds to take screenshots
 
-requirements:
+### Requirements
 * Be using wayland
 * wl-clipboard
 * Bash
 * grim
 * slurp
 
-to install 
+### Installation
 1. clone this repo and navigate inside the folder.
 2. run `./init.sh'
 3. run 'export PATH=\$HOME/.scripts/screenshot-utils:\$PATH'
 4. profit
 
+### Explination
 screenshot-utils has three scripts: `screenshot`, `selective_screenshot` and `window_screenshot`.
 
 `screenshot` takes a snapshot of your whole screen
