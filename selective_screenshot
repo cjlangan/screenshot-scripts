@@ -11,3 +11,7 @@ fi
 
 grim -g "$(slurp)" - | tee $filepath/$filename | wl-copy
 
+if [ $copypath == "AFTER" ]
+then
+    echo $filepath/$filename | wl-copy
+fi

@@ -11,3 +11,9 @@ then
 fi
 
 grim - | tee $filepath/$filename  | wl-copy
+
+if [ $copypath == "AFTER" ]
+then
+    echo $filepath/$filename | wl-copy
+fi
+

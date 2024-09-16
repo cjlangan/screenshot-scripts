@@ -12,3 +12,7 @@ fi
 grim -g "$(swaymsg -t get_tree | jq -j '.. | select(.type?) | select(.focused).rect | "\(.x),\(.y) \(.width)x\(.height)"')" - | 
 	tee $filepath/$filename | wl-copy
 
+if [ $copypath == "AFTER" ]
+then
+    echo $filepath/$filename | wl-copy
+fi
