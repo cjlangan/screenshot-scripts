@@ -10,11 +10,7 @@ screenshot-utils is a set of screenshot scripts that are meant to be used as key
 ### Installation
 1. clone this repo and navigate inside the folder.
 2. run `./init.sh'
-3. To permintantly add the scripts location to your path run 
-   `echo \"export PATH=\\\$HOME/.scripts/screenshot-utils:\\\$PATH\" >> \$HOME/.bashrc`
-   Otherwise, run 
-   `export PATH=\$HOME/.scripts/screenshot-utils:\$PATH`
-4. profit
+3. profit
 
 ### Usage
 screenshot-utils has three scripts: `screenshot`, `selective_screenshot` and `window_screenshot`.
