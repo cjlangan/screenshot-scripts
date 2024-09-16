@@ -9,7 +9,7 @@ screenshot-utils is a set of screenshot scripts that are meant to be used as key
 
 ### Installation
 1. clone this repo and navigate inside the folder.
-2. run `./init.sh'
+2. run `./init.sh`
 3. profit
 
 ### Usage
