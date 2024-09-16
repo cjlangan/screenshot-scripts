@@ -18,12 +18,13 @@ echo $HOME/Pictures/Screenshots > $HOME/.config/screenshot-utils/screenshot-path
 
 mv screenshot selective_screenshot window_screenshot $HOME/.scripts/screenshot-utils/
 
-echo ""
+exists_in_path=$(cat $HOME/.bashrc | grep -c "export PATH=\$HOME/.scripts/screenshot-utils:\$PATH")
+if [ $exists_in_path == 0 ]
+then
+    echo "export PATH=\$HOME/.scripts/screenshot-utils:\$PATH" >> $HOME/.bashrc
+fi
+
 echo "Installation finished."
 echo "You can now remove this folder."
-echo "To temporarily add the scripts to your path run"
-echo "export PATH=\$HOME/.scripts/screenshot-utils:\$PATH"
-echo "To perminantly add the scripts to your path run"
-echo "echo \"export PATH=\\\$HOME/.scripts/screenshot-utils:\\\$PATH\" >> \$HOME/.bashrc"
 
 rm init.sh
