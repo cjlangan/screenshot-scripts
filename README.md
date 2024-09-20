@@ -1,22 +1,21 @@
 # gnome-screenshot-utils 
 - a screenshot script to also copy the screenshot path to your clipboard
 
+## Usage
+
+```bash
+Usage: gscreen [-w] [-b]
+  -w      take screenshot of entire screen
+  -b      copy file path to clipboard before the screenshot
+with no flags, it will be a selective screenshot and the
+file path will be copied to your clipboard after
+```
+
 ### Requirements
-* Be using wayland
-* GNOME
-* wl-clipboard
-* Bash
-* grim
-* slurp
+- gnome-screenshot
+- wl-clipboard
+- Bash
 
 ### Installation
 1. clone this repo and navigate inside the folder.
-2. run `./init.sh`
-3. profit
-
-### Configuration
-screenshot-utils uses two configuration files both located at `$HOME/.config/screenshot-utils`. 
-
-The first file is `copy-path` and by default contains `AFTER`. If set to `TRUE` it will load the path of the file into the clipboard before it takes the screenshot. If set to `AFTER` it will save the path to the clipboard after the screenshot. 
-
-The second file is `screenshot-path` it determines the path where the screenshots are saved. The default is `$HOME/Pictures/Screenshots`. 
+2. run `./install.sh`
