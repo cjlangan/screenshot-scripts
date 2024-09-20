@@ -3,7 +3,7 @@
 # Function to show help
 function show_help
 {
-    echo "Usage: gscreen [-w]"
+    echo "Usage: gscreen [-w] [-b]"
     echo "  -w      take screenshot of entire screen"
     echo "  -b      copy file path to clipboard before the screenshot"
     echo "with no flags, it will be a selective screenshot and the"
