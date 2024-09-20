@@ -1,19 +1,51 @@
 #!/bin/bash
-#basically all the screen shot code is copied from here:
-#  -> https://sr.ht/~emersion/grim/
+
+# Function to show help
+function show_help
+{
+    echo "Usage: gscreen [-w]"
+    echo "  -w      take screenshot of entire screen"
+    echo "  -b      copy file path to clipboard before the screenshot"
+    echo "with no flags, it will be a selective screenshot and the"
+    echo "file path will be copied to your clipboard after"
+}
+
+whole=" -a"
+before=false
+
+while getopts "wb" opt; do
+    case ${opt} in
+        w )
+            whole=""
+            ;;
+        b )
+            before=true
+            ;;
+        \? )
+            echo "Invalid option: -$OPTARG" >&2
+            show_help
+            exit 1
+            ;;
+    esac
+done
+
 filename=$(date +'%Y-%m-%d-%H.%M.%S').png
 filepath=$(cat $HOME/.config/screenshot-utils/screenshot-path)
 copypath=$(cat $HOME/.config/screenshot-utils/copy-path)
 
-if [ $copypath == "TRUE" ]
-then
+if [ before == true ]; then
     echo $filepath/$filename | wl-copy
 fi
 
-gnome-screenshot -a -f "$filepath/$filename"
+# Take screenshot and copy to clipboard
+if [ whole == true ]; then
+    gnome-screenshot -f "$filepath/$filename" | wl-copy
+else
+    gnome-screenshot -a -f "$filepath/$filename" | wl-copy
+fi
 
-if [ $copypath == "AFTER" ]
-then
+
+if [ before == false ]; then
     echo $filepath/$filename | wl-copy
 fi
 
