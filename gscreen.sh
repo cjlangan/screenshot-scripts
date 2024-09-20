@@ -22,7 +22,6 @@ while getopts "wb" opt; do
             before=true
             ;;
         \? )
-            echo "Invalid option: -$OPTARG" >&2
             show_help
             exit 1
             ;;
