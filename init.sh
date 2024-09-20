@@ -16,7 +16,7 @@ echo "FALSE" > $HOME/.config/screenshot-utils/copy-path
 mkdir $HOME/Pictures/Screenshots
 echo $HOME/Pictures/Screenshots > $HOME/.config/screenshot-utils/screenshot-path
 
-mv screenshot selective_screenshot window_screenshot $HOME/.scripts/screenshot-utils/
+cp screenshot selective_screenshot window_screenshot $HOME/.scripts/screenshot-utils/
 
 exists_in_path=$(cat $HOME/.bashrc | grep -c "export PATH=\$HOME/.scripts/screenshot-utils:\$PATH")
 if [ $exists_in_path == 0 ]
