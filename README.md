@@ -1,7 +1,8 @@
-screenshot-utils is a set of screenshot scripts that are meant to be used as keybinds to take screenshots
+gnome-screenshot-utils is a set of screenshot scripts that are meant to be used as keybinds to take screenshots
 
 ### Requirements
 * Be using wayland
+* GNOME
 * wl-clipboard
 * Bash
 * grim

@@ -10,7 +10,7 @@ then
     echo $filepath/$filename | wl-copy
 fi
 
-grim - | tee $filepath/$filename  | wl-copy
+gnome-screenshot -a -f "$filepath/$filename"
 
 if [ $copypath == "AFTER" ]
 then
