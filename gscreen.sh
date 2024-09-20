@@ -30,8 +30,7 @@ while getopts "wb" opt; do
 done
 
 filename=$(date +'%Y-%m-%d-%H.%M.%S').png
-filepath=$(cat $HOME/.config/screenshot-utils/screenshot-path)
-copypath=$(cat $HOME/.config/screenshot-utils/copy-path)
+filepath="~/Pictures/Screenshots"
 
 if [ before == true ]; then
     echo $filepath/$filename | wl-copy
@@ -43,7 +42,6 @@ if [ whole == true ]; then
 else
     gnome-screenshot -a -f "$filepath/$filename" | wl-copy
 fi
-
 
 if [ before == false ]; then
     echo $filepath/$filename | wl-copy

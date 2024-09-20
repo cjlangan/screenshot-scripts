@@ -1,8 +1,7 @@
 #!/bin/bash
 
 #setup the config files
-mkdir $HOME/.config/screenshot-utils
-echo "AFTER" > $HOME/.config/screenshot-utils/copy-path
+mkdir $HOME/.config/gnome-screenshot-utils
 mkdir $HOME/Pictures/Screenshots
 echo $HOME/Pictures/Screenshots > $HOME/.config/screenshot-utils/screenshot-path
 
