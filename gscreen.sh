@@ -43,7 +43,7 @@ fi
 # Take screenshot and copy to clipboard
 if [ "$entire" == "true" ]; then # take regular screenshot
     gnome-screenshot -f "$filepath/$filename" | wl-copy
-elif ["$window" == "true"]; then # take screenshot of window
+elif [ "$window" == "true" ]; then # take screenshot of window
     gnome-screenshot -w -f "$filepath/$filename" | wl-copy
 else # take selective screenshot
     gnome-screenshot -a -f "$filepath/$filename" | wl-copy
