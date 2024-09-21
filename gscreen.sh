@@ -3,20 +3,25 @@
 # Function to show help
 function show_help
 {
-    echo "Usage: gscreen [-w] [-b]"
-    echo "  -w      take screenshot of entire screen"
+    echo "Usage: gscreen [-e] [-w] [-b]"
+    echo "  -e      take screenshot of entire screen"
+    echo "  -w      take screenshot of current window"
     echo "  -b      copy file path to clipboard before the screenshot"
     echo "with no flags, it will be a selective screenshot and the"
     echo "file path will be copied to your clipboard after"
 }
 
-whole=false
+entire=false
+window=false
 before=false
 
-while getopts "wb" opt; do
+while getopts "ewb" opt; do
     case ${opt} in
+        e )
+            entire=true
+            ;;
         w )
-            whole=true
+            window=true
             ;;
         b )
             before=true
@@ -36,9 +41,11 @@ if [ "$before" == "true" ]; then
 fi
 
 # Take screenshot and copy to clipboard
-if [ "$whole" == "true" ]; then
+if [ "$entire" == "true" ]; then # take regular screenshot
     gnome-screenshot -f "$filepath/$filename" | wl-copy
-else
+elif ["$window" == "true"]; then # take screenshot of window
+    gnome-screenshot -w -f "$filepath/$filename" | wl-copy
+else # take selective screenshot
     gnome-screenshot -a -f "$filepath/$filename" | wl-copy
 fi
 
